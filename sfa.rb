@@ -33,8 +33,9 @@ f_text.each_with_index{|txt,i|
 #出力
 f_print.each{|tango|
   #改行を取り除く
-  tango = tango.gsub(/\n/, '') 
-  #出力
-  puts tango
-}
+  tango = tango.gsub(/\r/, '').gsub(/\n/, '') 
 
+  #出力
+  print tango
+}
+puts ''
